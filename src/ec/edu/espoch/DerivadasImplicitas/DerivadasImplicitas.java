@@ -1,4 +1,4 @@
-package ec.edu.espoch;
+package ec.edu.espoch.DerivadasImplicitas;
 
 import ec.edu.espoch.vista.CalculadoraDerivadaImplicita;
 

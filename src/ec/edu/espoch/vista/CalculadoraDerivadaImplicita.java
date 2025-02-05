@@ -141,9 +141,9 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
         jPanel1.add(constanteX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 140, 34));
 
         jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel5.setText("Ingrese la Funcion a derivar");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
+        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel5.setText("\"Ingrese la Funcion a derivar\"");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/jir.jpg"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 420));
