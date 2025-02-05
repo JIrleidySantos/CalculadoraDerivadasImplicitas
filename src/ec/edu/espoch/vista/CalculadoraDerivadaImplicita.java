@@ -69,7 +69,7 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
                 constanteXActionPerformed(evt);
             }
         });
-        jPanel1.add(constanteX, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 200, 30));
+        jPanel1.add(constanteX, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 200, 30));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel11.setText("Ingresa la Derivación de y:");
@@ -80,7 +80,7 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
                 constanteYActionPerformed(evt);
             }
         });
-        jPanel1.add(constanteY, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 201, 30));
+        jPanel1.add(constanteY, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 201, 30));
 
         derivarX.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         derivarX.setText("Derivar x");
