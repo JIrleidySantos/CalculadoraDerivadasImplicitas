@@ -153,28 +153,28 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
                 constanteY1ActionPerformed(evt);
             }
         });
-        jPanel1.add(constanteY1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 140, 34));
+        jPanel1.add(constanteY1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 140, 34));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/linea1.jpeg"))); // NOI18N
         jLabel6.setText("/");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 192, 2));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 192, 2));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/resta1.jpeg"))); // NOI18N
         jLabel7.setText("-");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 15, 2));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 15, 2));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel3.setText("y'=");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, -1, -1));
 
         constanteX1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 constanteX1ActionPerformed(evt);
             }
         });
-        jPanel1.add(constanteX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 140, 34));
+        jPanel1.add(constanteX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 140, 34));
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 120, 110));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 120));
 
