@@ -8,10 +8,7 @@ import javax.swing.JLabel;
 
 import javax.swing.JOptionPane;
 
-
 public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
-
-  
     
     Derivacion derivada;
 
@@ -19,9 +16,8 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
         initComponents();
         Limpiar();
         this.setLocationRelativeTo(null);
-       TextPrompt letras = new TextPrompt("Ingrese la funcion a derivar", txtFyX);
-        SetImagenLabel(jLabel5,"src/Imagenes/logo.png" );
-        SetImagenLabel(jLabel8,"src/Imagenes/ESPOCH.png" );
+       TextPrompt letras = new TextPrompt("Ingrese la función a derivar", txtFyX);
+        
     }
 
     private void SetImagenLabel(JLabel labelname, String root){
@@ -56,6 +52,7 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
         constanteX1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         jInternalFrame1.setVisible(true);
@@ -83,9 +80,9 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
         jLabel1.setText("DERIVADAS IMPLICITAS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 380, -1));
 
-        jLabel2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Book Antiqua", 1, 18)); // NOI18N
         jLabel2.setText("F(x,y)=");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, -1, -1));
 
         txtFyX.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtFyX.setDoubleBuffered(true);
@@ -94,10 +91,10 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
                 txtFyXActionPerformed(evt);
             }
         });
-        jPanel1.add(txtFyX, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 185, 33));
+        jPanel1.add(txtFyX, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 185, 33));
 
-        jLabel10.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel10.setText("Ingresa la Derivación de x:");
+        jLabel10.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jLabel10.setText("La Derivación de X es:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 214, -1));
 
         constanteX.addActionListener(new java.awt.event.ActionListener() {
@@ -107,9 +104,9 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
         });
         jPanel1.add(constanteX, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 200, 30));
 
-        jLabel11.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel11.setText("Ingresa la Derivación de y:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 223, -1));
+        jLabel11.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jLabel11.setText("La Derivación de Y es:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 223, -1));
 
         constanteY.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,8 +115,9 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
         });
         jPanel1.add(constanteY, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 201, 30));
 
-        derivarX.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        derivarX.setText("Derivar x");
+        derivarX.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        derivarX.setText("Derivar (x)");
+        derivarX.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         derivarX.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 derivarXActionPerformed(evt);
@@ -127,8 +125,9 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
         });
         jPanel1.add(derivarX, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 162, -1));
 
-        derivarY.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        derivarY.setText("Derivar y");
+        derivarY.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        derivarY.setText("Derivar (y)");
+        derivarY.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         derivarY.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 derivarYActionPerformed(evt);
@@ -136,49 +135,59 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
         });
         jPanel1.add(derivarY, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 162, -1));
 
-        limpiar.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        limpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/papelera1.jpeg"))); // NOI18N
+        limpiar.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        limpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/papelera.png"))); // NOI18N
         limpiar.setText("Limpiar");
         limpiar.setToolTipText("");
+        limpiar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         limpiar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limpiarActionPerformed(evt);
             }
         });
-        jPanel1.add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 162, -1));
+        jPanel1.add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 170, 30));
 
         constanteY1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 constanteY1ActionPerformed(evt);
             }
         });
-        jPanel1.add(constanteY1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 140, 34));
+        jPanel1.add(constanteY1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 140, 34));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/linea1.jpeg"))); // NOI18N
         jLabel6.setText("/");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 192, 2));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 192, 2));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/resta1.jpeg"))); // NOI18N
         jLabel7.setText("-");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 15, 2));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 400, 15, 2));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel3.setText("y'=");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, -1, -1));
 
         constanteX1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 constanteX1ActionPerformed(evt);
             }
         });
-        jPanel1.add(constanteX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 140, 34));
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 120, 110));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 120));
+        jPanel1.add(constanteX1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 140, 34));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/jir.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ESPOCH2.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 120, 130));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo2.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 140));
+
+        jLabel12.setFont(new java.awt.Font("Baskerville Old Face", 1, 18)); // NOI18N
+        jLabel12.setText("Su derivada de acuerdo a su fórmula:");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 280, 20));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo.jpg"))); // NOI18N
+        jLabel4.setToolTipText("");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -222,7 +231,7 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
             constanteX1.setText(derivada.getFuncionDerivada());
 
         } else {
-            JOptionPane.showMessageDialog(null, "Ingrese Valores", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "No Existen Valores Ingresados", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_derivarYActionPerformed
 
@@ -237,7 +246,7 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
             constanteY1.setText(derivada.getFuncionDerivada());
 
         } else {
-            JOptionPane.showMessageDialog(null, "Ingrese Valores", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "No Existen Valores Ingresados", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_derivarXActionPerformed
 
@@ -266,6 +275,7 @@ public class CalculadoraDerivadaImplicita extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
